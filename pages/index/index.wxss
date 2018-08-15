@@ -1,0 +1,16 @@
+/**index.wxss**/
+
+.wel_ss {
+	text-align: center;
+	height: 20px;
+}
+
+.welsys_ss {
+	font-size: 35px;
+	text-align: center;
+	color: red;
+}
+
+.btn_in {
+	margin-top: 200px;
+}

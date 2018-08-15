@@ -1,0 +1,11 @@
+<import src="../header/header"/>
+<template is="header" data="{{Question_Number:Question_Number1, userInfo:userInfo}}"/>
+
+
+
+<view class="container">
+  
+handsome!
+
+  
+</view>

@@ -1,0 +1,21 @@
+<template name="header">
+	
+	<view class="header">
+
+	  <view class="userinfo">
+	      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+	      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+	  </view>
+
+	  <view class="question-number">
+	  	{{Question_Number}}
+	  </view>
+
+	  <view class="help">
+	  	<image class="help_img" src="../../lib/images/帮助.png" mode="scaleToFill"></image>
+	  	<text class="help_txt"> 寻求帮助 </text>
+	  </view>
+
+	</view>
+	
+</template>

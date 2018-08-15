@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  
+  <view class="wel_ss">
+    <text>
+        欢迎来到
+    </text>
+  </view>
+  <view class="welsys_ss"> 
+    <text>
+        自我鉴定系统
+    </text>
+  </view>
+
+
+
+  <view class="btn_in">
+    <button type="primary"  
+    open-type="getUserInfo"
+    bindgetuserinfo="gotoFirstPage">
+      点击进入！
+    </button>
+  </view>
+  
+
+</view>
