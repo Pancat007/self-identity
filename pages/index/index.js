@@ -15,8 +15,7 @@ Page({
 
   onLoad: function () {
 
-    console.log("进入到首页")
-
+    // app.getUserInfo();
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -48,6 +47,7 @@ Page({
         }
       })
 
+      console.log(app.globalData.userInfo.nickName + " 进入到首页")
 
     }
   },
@@ -59,7 +59,6 @@ Page({
     if (e.detail.userInfo) {
 
         console.log(e)
-        console.log("点击进入按钮")
 
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
@@ -67,13 +66,16 @@ Page({
           hasUserInfo: true
         })
 
-        console.log(app.globalData.userInfo)
+        
+        console.log(app.globalData.userInfo) 
+        console.log(app.globalData.userInfo.nickName + " 点击了进入按钮！")
 
-        wx.navigateTo({
-        url: '../handsome/handsome'
+
+        wx.redirectTo({
+        url: "../handsome/handsome"
         })
         
-        console.log("跳转到handsome页面")
+        // console.log(app.globalData.userInfo.nickName + " 跳转到handsome页面")
 
     }
 

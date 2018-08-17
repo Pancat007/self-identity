@@ -1,16 +1,58 @@
 /**index.wxss**/
 
+Page {
+	background: #DAD3F8;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+/*  background-color: #DAD3F8*/
+} 
+
+.wel_txt {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 25px;
+	font-weight: bold;
+	
+}
+
+.wel_txt1 {
+	
+}
+
+.wel_txt2 {
+	
+}
+
+.wel_txt2 text {
+	color: #F7F709;
+	font-size: 40px;
+}
+
 .wel_ss {
 	text-align: center;
+	padding: 10px;
 	height: 20px;
 }
 
+
+
 .welsys_ss {
-	font-size: 35px;
+	font-size: 50px;
+	font-weight: bold;
 	text-align: center;
 	color: red;
 }
 
 .btn_in {
-	margin-top: 200px;
+	margin-top: 180px;
 }

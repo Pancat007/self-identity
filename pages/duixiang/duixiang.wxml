@@ -1,32 +1,32 @@
-<!-- header -->
 <import src="../header/header"/>
-<template is="header" data="{{Question_Number:Question_Number1, userInfo:userInfo}}"/>
+<template is="header" data="{{Question_Number:Question_Number2, userInfo:userInfo}}"/>
 
 
 <view class="container">
   
 	<view class="Question-view">
 		<text class="Question-text">
-			你觉得你\n长得好看吗？
+			请问你有\n男/女朋友\n吗？
 		</text>
 	</view>
 
 	<view class="option1">
-		<button id="1_1" type="primary" bind:tap="first_yes">
-			当然！			
+		<button id="2_1" type="primary" bind:tap="second_yes">
+			有啊。		
 		</button>
 	</view>
 
 
 	<view class="option2">
-		<button id="1_2" type="warn" bind:tap="first_no">
-			<text class="option2_txt">不好看。</text>
+		<button id="2_2" type="warn" bind:tap="second_no">
+			<text class="option2_txt"> 不好意思，单身狗。</text>
 		</button>
 	</view>
 
-<!-- toast -->
+
 <import src="../../lib/template/template.wxml"/>
 <template is="toast" data="{{isShowToast:isShowToast, toastIcon:toastIcon, toastText:toastText}}"></template>
+
 
 
 </view>

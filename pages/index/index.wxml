@@ -1,11 +1,15 @@
 <!--index.wxml-->
 <view class="container">
   
-  <view class="wel_ss">
-    <text>
+  <view class="wel_txt">
+    <view class="wel_txt1">
         欢迎来到
-    </text>
+    </view>
+    <view class="wel_txt2">
+        史上最<text> 准 </text>的
+    </view>
   </view>
+
   <view class="welsys_ss"> 
     <text>
         自我鉴定系统

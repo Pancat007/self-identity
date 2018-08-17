@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+  
+  <view class="ResultHint">
+    <text class="Congratulation">
+      恭喜你！
+    </text>
+  </view>
+
+  <view  class="hint">
+    <text> 
+      你已完成所有测试,
+    </text>
+    <text class="hint2">  
+      点击按钮即可查看测试结果！    
+    </text>
+  </view>
+  
+
+  <view wx:if="{{IsShowRes}}" class="ResTxtFrame">
+    <text class="ResTxt">{{TestResult}}</text>
+  </view>
+
+  <view wx:if="{{!IsRestart}}" class="showResBtn">
+    <button class="ResBtn" bind:tap="showResult">
+        点击查看结果
+    </button>
+  </view>
+
+  <view wx:else="{{IsRestart}}" class="showResBtn">
+    <button class="RestartBtn" bind:tap="showResult">
+        我不服，我要重来！
+    </button>
+  </view>
+
+
+</view>

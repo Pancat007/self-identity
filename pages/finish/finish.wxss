@@ -1,0 +1,96 @@
+/**index.wxss**/
+
+Page {
+	background: #DAD3F8;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80rpx 0;
+  box-sizing: border-box;
+/*  background-color: #DAD3F8*/
+} 
+
+.ResultHint {
+	margin-top: -50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	/*border: 5px solid #fff;*/
+}
+
+.Congratulation {
+	margin-top: -50px;
+	color: red;
+	margin-left: 40px;
+	font-weight: bolder;
+	font-size: 50px;
+}
+
+.hint {
+	margin-top: -20px;
+	display: flex;
+	padding: 10px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.hint2 {
+	margin-top: -25px;
+	margin-left: 10px;
+}
+
+
+
+.ResTxtFrame {
+	margin-top: 10px;
+	width: 280px;
+	height: 310px;
+	padding: 10px;
+
+	border: 5px solid #C211EE;
+	border-radius: 10px;
+	background-color: #DE80F6;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	text-align: left;
+
+}
+
+.ResTxt {
+	height: 200px;
+	margin-left: 2px;
+	/*border: 2px solid;*/
+	margin-top: -120px;
+	font-weight: bold;
+	font-size: 23px;
+	word-spacing: 5px;
+}
+
+.ResBtn {
+	top: 510px;
+	margin-left: -82px; 
+	width: 150px;
+	background-color: yellow;
+	color: red;
+	position: absolute;
+}
+
+.RestartBtn {
+	top: 510px;
+	margin-left: -100px; 
+	width: 200px;
+	background-color: yellow;
+	color: red;
+	position: absolute;
+	font-weight: bold;
+}

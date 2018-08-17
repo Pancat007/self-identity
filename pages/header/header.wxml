@@ -11,11 +11,16 @@
 	  	{{Question_Number}}
 	  </view>
 
-	  <view class="help">
-	  	<image class="help_img" src="../../lib/images/帮助.png" mode="scaleToFill"></image>
+	  <view class="help" bind:tap="help_click">
+	  	<!-- <image class="help_img" src="../../lib/images/帮助.png" mode="scaleToFill"></image> -->
+	  	<span class="iconfont icon-bulb"> </span>
 	  	<text class="help_txt"> 寻求帮助 </text>
 	  </view>
-
+	  
 	</view>
 	
 </template>
+
+<!-- 
+	  <import src="../../lib/template/template.wxml"/>
+<template is="toast" data="{{isShowToast:isShowToast, toastIcon:toastIcon, toastText:toastText}}"></template> -->

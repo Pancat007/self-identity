@@ -34,11 +34,51 @@ App({
         }
       }
     })
+
+
   },
 
 
+
+  // getUserInfo: function() {},
+
+
+  // showToast: function(that, icon, toasttxt, time){
+  //   var _this = that;
+
+  //   //超时时间
+  //   if (time) {
+  //     _this.data.count = parseInt(time);
+  //   }else{
+  //     _this.data.count = 1500;
+  //   }
+    
+  //   //更新数据
+  //   _this.setData({
+  //     isShowToast: true,
+  //     toastIcon: icon,
+  //     toastText: toasttxt
+  //   });
+    
+  //   //设置自己的超时函数
+  //   setTimeout(function () {
+  //     _this.setData({
+  //       isShowToast: false
+  //     });
+  //   }, _this.data.count);
+
+  // },
+
+
   globalData: {
-    userInfo: null
+    userInfo: null,
+
+
+    // count: 1500,
+    // isShowToast: false,
+    // toastIcon: null,
+    // toastText: "default"
+
   }
 
   

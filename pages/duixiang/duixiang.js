@@ -1,8 +1,7 @@
 //获取应用实例
 const app = getApp()
 
-var util = require("../../utils/util.js");
-// var head = require("../header/header.js");
+// var util = require("../../utils/util.js");
 
 Page({
 
@@ -11,12 +10,15 @@ Page({
    */
   data: {
     userInfo: {},
-    Question_Number1:"第一题",
+    Question_Number2:"第二题",
 
     count: 1500,
     isShowToast: false,
     toastIcon: null,
-    toastText: "default"
+    toastText: "default",
+
+
+    first: "wow"
 
   },
 
@@ -25,7 +27,11 @@ Page({
    */
   onLoad: function (options) {
 
-    console.log(app.globalData.userInfo.nickName + " 进入到第一题")
+    console.log(app.globalData.userInfo.nickName + " 进入到第二题")
+
+    this.setData({
+      first: options.first
+    })
 
     // 获取人物信息
       if (app.globalData.userInfo) {
@@ -85,42 +91,38 @@ Page({
   },
 
 
-  first_yes:function() {
-    console.log(app.globalData.userInfo.nickName + " 第一题 点击第一个按钮！（好看）")
-    // wx.showToast({
-    //   title: "成功！",
-    //   image: "../../lib/images/奖杯.png",
-    //   duration: 1000,
-    //   mask: true
-    // })
+  second_yes:function() {
+    console.log(app.globalData.userInfo.nickName + " 第二题 点击第一个按钮！（有对象）")
 
-    this.showToast("icon-jiangbei", "恭喜！您已获得 \n“厚颜无耻”\n 称号！","3200");
-    // app.showToast("this", "icon-jiangbei", 
-    //   "恭喜！您已获得 \n“厚颜无耻”\n 称号！","3200");
-
-    // var util = require('../../utils/util.js')
-    // util.showToast("this", "icon-jiangbei", 
-    //   "恭喜！您已获得 \n“厚颜无耻”\n 称号！","3200")
-
+    this.showToast("icon-jiangbei", "恭喜！您已获得 \n“纵欲过度”\n 称号！","3200");
+    
+    var First = this.data.first
+    
     setTimeout(
-      function() {
+       function(e) {
           wx.redirectTo({
-            url: "../duixiang/duixiang?" + "first=yes"
+            url: "../millionaire/millionaire?" + 
+            "first=" + First + "&" + 
+            "second=" + "yes"
           }) 
         }, this.data.count
     )
 
   },
 
-  first_no:function(e) {
-    console.log(app.globalData.userInfo.nickName + " 第一题 点击第二个按钮！（不好看）")
+  second_no:function(e) {
+    console.log(app.globalData.userInfo.nickName + " 第二题 点击第二个按钮！（没有对象）")
 
-    this.showToast("icon-jiangbei", "恭喜！您已获得 \n“诚实正直”\n 称号！","3200");
-    //3200
+    this.showToast("icon-jiangbei", "恭喜！您已获得 \n“屌丝”\n 称号！","3200");
+    
+    var First = this.data.first
+
     setTimeout(
       function() {
           wx.redirectTo({
-            url: "../duixiang/duixiang?" + "first=no"
+            url: "../millionaire/millionaire?" + 
+            "first=" + First + "&" + 
+            "second=" + "no"
           }) 
         }, this.data.count
     )
@@ -129,10 +131,11 @@ Page({
 
   help_click: function(){
     // head.help_click();
-    this.showToast("icon-yiwen", "这么简单的问题\n都要帮助？", "1700");
+    this.showToast("icon-yiwen", "就两个选项\n也不会选？", "1700");
 
-    console.log(app.globalData.userInfo.nickName + " 第一题点击帮助！");
+    console.log(app.globalData.userInfo.nickName + " 第二题点击帮助！");
   }
+
 
 
 

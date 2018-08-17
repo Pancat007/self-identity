@@ -6,7 +6,8 @@
 @import "../../lib/template/template.wxss";
 
 
-/*handsome.wxss*/
+
+/*millioinaire.wxss*/
 
 .container {
   height: 100%;
@@ -23,8 +24,8 @@
 .Question-view {
 	margin-top: -50px;
 	margin-bottom: 20px;
-	width: 260px;
-	height: 270px;
+	width: 280px;
+	height: 290px;
 	border: 5px solid #C211EE;
 	border-radius: 10px;
 	background-color: #DE80F6;
@@ -44,12 +45,12 @@
 
 .option1 {
 	margin-bottom: 20px;
-	width: 180px;
+	width: 220px;
 	border-radius: 10px;
 }
 
 .option2 {
-	width: 180px;
+	width: 220px;
 	border-radius: 10px;
 }
 

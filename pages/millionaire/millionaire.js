@@ -1,8 +1,7 @@
 //获取应用实例
 const app = getApp()
 
-var util = require("../../utils/util.js");
-// var head = require("../header/header.js");
+// var util = require("../../utils/util.js");
 
 Page({
 
@@ -11,12 +10,15 @@ Page({
    */
   data: {
     userInfo: {},
-    Question_Number1:"第一题",
+    Question_Number3:"第三题",
 
     count: 1500,
     isShowToast: false,
     toastIcon: null,
-    toastText: "default"
+    toastText: "default",
+
+    first: null,
+    second: null
 
   },
 
@@ -25,7 +27,13 @@ Page({
    */
   onLoad: function (options) {
 
-    console.log(app.globalData.userInfo.nickName + " 进入到第一题")
+    console.log(app.globalData.userInfo.nickName + " 进入到第三题")
+
+    this.setData({
+      first: options.first,
+      second: options.second
+    })
+
 
     // 获取人物信息
       if (app.globalData.userInfo) {
@@ -85,55 +93,54 @@ Page({
   },
 
 
-  first_yes:function() {
-    console.log(app.globalData.userInfo.nickName + " 第一题 点击第一个按钮！（好看）")
-    // wx.showToast({
-    //   title: "成功！",
-    //   image: "../../lib/images/奖杯.png",
-    //   duration: 1000,
-    //   mask: true
-    // })
+  third_yes:function() {
+    console.log(app.globalData.userInfo.nickName + " 第三题 点击第一个按钮！（可能有钱）");
 
-    this.showToast("icon-jiangbei", "恭喜！您已获得 \n“厚颜无耻”\n 称号！","3200");
-    // app.showToast("this", "icon-jiangbei", 
-    //   "恭喜！您已获得 \n“厚颜无耻”\n 称号！","3200");
+    this.showToast("icon-jiangbei", "恭喜！您已获得 \n“异想天开”\n 称号！","3200");
 
-    // var util = require('../../utils/util.js')
-    // util.showToast("this", "icon-jiangbei", 
-    //   "恭喜！您已获得 \n“厚颜无耻”\n 称号！","3200")
+    var First = this.data.first;
+    var Second = this.data.second;
 
     setTimeout(
       function() {
           wx.redirectTo({
-            url: "../duixiang/duixiang?" + "first=yes"
+            url: "../finish/finish?" + 
+            "first=" + First + "&" + 
+            "second=" + Second + "&" +
+            "third=" + "yes"
           }) 
         }, this.data.count
     )
 
   },
 
-  first_no:function(e) {
-    console.log(app.globalData.userInfo.nickName + " 第一题 点击第二个按钮！（不好看）")
 
-    this.showToast("icon-jiangbei", "恭喜！您已获得 \n“诚实正直”\n 称号！","3200");
-    //3200
+  third_no:function(e) {
+    console.log(app.globalData.userInfo.nickName + " 第三题 点击第二个按钮！（不能有钱）")
+    this.showToast("icon-jiangbei", "恭喜！您已获得 \n“没有梦想的咸鱼”\n 称号！","3200");
+  
+    var First = this.data.first;
+    var Second = this.data.second;
+
     setTimeout(
       function() {
           wx.redirectTo({
-            url: "../duixiang/duixiang?" + "first=no"
+            url: "../finish/finish?" + 
+            "first=" + First + "&" + 
+            "second=" + Second + "&" +
+            "third=" + "no"
           }) 
         }, this.data.count
     )
-
   },
+
 
   help_click: function(){
     // head.help_click();
-    this.showToast("icon-yiwen", "这么简单的问题\n都要帮助？", "1700");
+    this.showToast("icon-yiwen", "真的不会的话\n要不打个电话\n问一下神奇海螺？", "2600");
 
-    console.log(app.globalData.userInfo.nickName + " 第一题点击帮助！");
+    console.log(app.globalData.userInfo.nickName + " 第三题点击帮助！");
   }
-
 
 
 
